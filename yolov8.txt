@@ -1,0 +1,17 @@
+pip install ultralytics
+yolo task=detect mode=predict model=yolov8n.pt conf=0.25 source='https://media.roboflow.com/notebooks/examples/dog.jpeg'
+yolo predict model=yolov8n.pt source='https://ultralytics.com/images/bus.jpg'
+yolo task=detect mode=predict model=yolov8n.pt conf=0.25 source=r'C:\Users\BAPS\Documents\Car_detect\parking2.jpg'
+
+segmentation:
+yolo task=segment mode=predict model=yolov8n-seg.pt source='https://ultralytics.com/images/bus.jpg'
+
+classification:
+yolo task=classify mode=predict model=yolov8n-cls.pt source='https://ultralytics.com/images/bus.jpg'
+
+pip install labelImg	
+yolo task=detect mode=train model=yolov8n.pt imgsz=640 data=custom_data.yaml epochs=10 batch=8 name=yolov8n_custom
+
+
+#pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu117
+

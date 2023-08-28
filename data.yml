@@ -1,0 +1,4 @@
+train: C:\Users\BAPS\Documents\Car_detect\train\images
+val: C:\Users\BAPS\Documents\Car_detect\valid\images
+nc: 3
+names: ['car','person','sloat']
